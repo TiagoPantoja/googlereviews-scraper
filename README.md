@@ -27,10 +27,13 @@ Este projeto é um exemplo de um scraper de avaliações do Google usando o Serv
 
 Para usar o scraper, você pode chamar a função `scrapeGoogleReviews` da seguinte maneira:
 
-```javascript
+```
 const { scrapeGoogleReviews } = require('./src/handler');
 
 const url = 'https://example.com/google-reviews';
 scrapeGoogleReviews(url)
   .then(reviews => console.log('Avaliações extraídas:', reviews))
   .catch(error => console.error('Erro ao extrair avaliações:', error));
+```
+
+Certifique-se de substituir `'https://example.com/google-reviews'` pela URL real da página do Google que deseja extrair avaliações. Por exemplo, se a URL real for `'https://www.google.com/maps/place/your-business'`, você deve substituir a URL na chamada da função `scrapeGoogleReviews` por `https://www.google.com/maps/place/your-business.`
